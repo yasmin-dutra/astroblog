@@ -1,0 +1,19 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroBlog - Signos do Zodíaco</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Bem-vindo ao AstroBlog</h1>
+    <h2>Escolha seu signo:</h2>
+    <ul>
+        {% descricao in signos.items() %}
+        <li><a href="/signo/{{ nome }}">{{ nome }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
